@@ -57,6 +57,7 @@ jobs:
       - node/install:
           node-version: '14.15' 
       - eb/setup
+      - aws-cli/setup
       - run:
           name: Set environment variables
           command: |
@@ -73,7 +74,6 @@ jobs:
             eb setenv AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
             eb setenv AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
             eb setenv AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-      - aws-cli/setup
       - checkout
       - run:
           name: Deploy App
