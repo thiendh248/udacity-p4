@@ -63,6 +63,7 @@ jobs:
           name: Set environment variables
           command: |
             echo "Set environment variables" 
+            eb init
             eb setenv POSTGRES_USERNAME=${POSTGRES_USERNAME}
             eb setenv POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
             eb setenv POSTGRES_HOST=${POSTGRES_HOST}
